@@ -1,4 +1,6 @@
 # 🗄️ BitByBit – SQL & .NET Core Course (v9)
+![Beschrijving](githubimage.png)
+
 
 📄 Reader: SQL (Jaar 1)
 
