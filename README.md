@@ -886,10 +886,17 @@ Daarvoor gebruik je **Entity Framework Core Database First**.
 Met scaffolding laat je EF Core classes genereren op basis van de tabellen uit de database.
 
 ### Theorie
+
+Met het volgende commando installeer je `EntityFramework`
+
+```bash
+dotnet tool install --global dotnet-ef
+```
+
 Met het volgende commando genereer je een `DbContext` en de modelclasses:
 
 ```bash
-dotnet ef dbcontext scaffold "server=localhost;database=bitbybit;user=root;password=;" Pomelo.EntityFrameworkCore.MySql -o Models -c BitByBitDbContext
+dotnet ef dbcontext scaffold "Server=localhost;Port=3306;Database=bitbybit;User=root;Password=;" Pomelo.EntityFrameworkCore.MySql --project BitByBit.Data --output-dir Models --context-dir Context --context BitByBitDbContext --data-annotations --no-onconfiguring --no-pluralize --force
 ```
 
 Na het scaffolden kun je de data in C# ophalen, bijvoorbeeld:
