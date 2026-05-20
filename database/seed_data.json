@@ -1,0 +1,89 @@
+{
+  "Klanten": [
+    {
+      "klantnr": 1,
+      "naam": "Jan Jansen",
+      "adres": "Dorpsstraat 1",
+      "postcode": "1234AB",
+      "plaats": "Sappemeer",
+      "telnr": "0612345678"
+    },
+    {
+      "klantnr": 2,
+      "naam": "Fatma Kaya",
+      "adres": "Markt 12",
+      "postcode": "5678CD",
+      "plaats": "Landsmeer",
+      "telnr": "0687654321"
+    },
+    {
+      "klantnr": 3,
+      "naam": "Piet de Vries",
+      "adres": "Havenweg 5",
+      "postcode": "1111AA",
+      "plaats": "Haarlem",
+      "telnr": "0600000000"
+    }
+  ],
+  "Producten": [
+    {
+      "productnr": 1,
+      "omschrijving": "Laptop Basic",
+      "prijs": 599.0,
+      "voorraad": 25,
+      "productsoort": "A"
+    },
+    {
+      "productnr": 2,
+      "omschrijving": "Laptop Pro",
+      "prijs": 1299.0,
+      "voorraad": 10,
+      "productsoort": "A"
+    },
+    {
+      "productnr": 3,
+      "omschrijving": "Muis Wireless",
+      "prijs": 19.95,
+      "voorraad": 100,
+      "productsoort": "B"
+    },
+    {
+      "productnr": 4,
+      "omschrijving": "Toetsenbord",
+      "prijs": 39.95,
+      "voorraad": 50,
+      "productsoort": "B"
+    },
+    {
+      "productnr": 5,
+      "omschrijving": "Monitor 27\"",
+      "prijs": 249.0,
+      "voorraad": 15,
+      "productsoort": "C"
+    }
+  ],
+  "Medewerkers": [
+    {
+      "mednr": 1,
+      "naam": "Sanne Smit",
+      "adres": "Kerklaan 3",
+      "plaats": "Haarlem",
+      "afdeling": "Sales",
+      "functie": "Verkoper",
+      "datumin": "2022-01-10",
+      "basissalaris": 2800.0,
+      "provisiep": 2.5
+    },
+    {
+      "mednr": 2,
+      "naam": "Ali Demir",
+      "adres": "Parkweg 9",
+      "plaats": "Amsterdam",
+      "afdeling": "Sales",
+      "functie": "Vertegenwoordiger",
+      "datumin": "2020-06-01",
+      "basissalaris": 3200.0,
+      "provisiep": 5.0
+    }
+  ]
+}

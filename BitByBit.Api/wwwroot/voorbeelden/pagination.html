@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Producten Pagination</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 700px;
+        }
+
+        th, td {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .pagination {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #pageInfo {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Producten</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Productnr</th>
+                <th>Naam</th>
+                <th>Prijs</th>
+            </tr>
+        </thead>
+
+        <tbody id="productenTableBody">
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button onclick="previousPage()">Vorige</button>
+        <button onclick="nextPage()">Volgende</button>
+    </div>
+
+    <p id="pageInfo"></p>
+
+    <script>
+        let currentPage = 1;
+        const pageSize = 5;
+        let totalPages = 1;
+
+        async function loadProducten() {
+
+            const response = await fetch(
+                `/api/producten/paged?page=${currentPage}&pageSize=${pageSize}`
+            );
+
+            const data = await response.json();
+
+            totalPages = data.totalPages;
+
+            const tbody = document.getElementById("productenTableBody");
+
+            tbody.innerHTML = "";
+
+            data.items.forEach(product => {
+
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${product.productnr}</td>
+                    <td>${product.naam}</td>
+                    <td>&euro; ${product.prijs}</td>
+                `;
+
+                tbody.appendChild(row);
+            });
+
+            document.getElementById("pageInfo").innerText =
+                `Pagina ${data.page} van ${data.totalPages} (${data.totalItems} producten)`;
+        }
+
+        function previousPage() {
+
+            if (currentPage > 1) {
+
+                currentPage--;
+
+                loadProducten();
+            }
+        }
+
+        function nextPage() {
+
+            if (currentPage < totalPages) {
+
+                currentPage++;
+
+                loadProducten();
+            }
+        }
+
+        loadProducten();
+    </script>
+
+</body>
+</html>

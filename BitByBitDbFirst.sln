@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11415.280 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitByBit.Data", "BitByBit.Data\BitByBit.Data.csproj", "{CBC450A5-D934-4ECB-8C64-330229D0A1B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitByBit.Api", "BitByBit.Api\BitByBit.Api.csproj", "{9BAF82CC-6A15-476A-8269-774D86F0E598}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBC450A5-D934-4ECB-8C64-330229D0A1B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC450A5-D934-4ECB-8C64-330229D0A1B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC450A5-D934-4ECB-8C64-330229D0A1B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC450A5-D934-4ECB-8C64-330229D0A1B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BAF82CC-6A15-476A-8269-774D86F0E598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BAF82CC-6A15-476A-8269-774D86F0E598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BAF82CC-6A15-476A-8269-774D86F0E598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BAF82CC-6A15-476A-8269-774D86F0E598}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
